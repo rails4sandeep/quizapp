@@ -1,0 +1,39 @@
+
+<%= form_tag(:controller => "questionsets",:action => "result",:method => "post") do %>
+<div class="row">
+  <div class="large-12 columns">
+    Your Score: <b><%= @score %></b>
+  </div>
+  <div class="large-12 columns">
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+  </div>
+  <div class="large-12 columns">
+    <%= @next_set.question %>
+  </div>
+  <div class="large-12 columns">
+    <%= radio_button_tag(:selected_answer,"1")%>
+    <%= label_tag(:selected_answer,"#{@next_set.answer1}") %>
+  </div>
+  <div class="large-12 columns">
+    <%= radio_button_tag(:selected_answer,"2")%>
+    <%= label_tag(:selected_answer,"#{@next_set.answer2}") %>
+  </div>
+  <div class="large-12 columns">
+    <%= radio_button_tag(:selected_answer,"3")%>
+    <%= label_tag(:selected_answer,"#{@next_set.answer3}") %>
+  </div>
+  <div class="large-12 columns">
+    <%= radio_button_tag(:selected_answer,"4")%>
+    <%= label_tag(:selected_answer,"#{@next_set.answer4}") %>
+  </div>
+  <div class="large-6 columns">
+    <%= submit_tag("submit",:disabled_with => "Answered...") %>
+  </div>  
+  <div class="large-6 columns">
+    <%= link_to("next",:controller => "questionsets",:action => "next") %>
+  </div>  
+</div>
+<% end %>
+    

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%= @questionset.question %>
+</p>
+
+<p>
+  <b>Answer1:</b>
+  <%= @questionset.answer1 %>
+</p>
+
+<p>
+  <b>Answer2:</b>
+  <%= @questionset.answer2 %>
+</p>
+
+<p>
+  <b>Answer3:</b>
+  <%= @questionset.answer3 %>
+</p>
+
+<p>
+  <b>Answer4:</b>
+  <%= @questionset.answer4 %>
+</p>
+
+<p>
+  <b>Correct:</b>
+  <%= @questionset.correct %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%= @questionset.weight %>
+</p>
+
+
+<%= link_to 'Edit', edit_questionset_path(@questionset) %> |
+<%= link_to 'Back', questionsets_path %>

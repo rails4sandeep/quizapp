@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  question: MyText
+  answer1: MyText
+  answer2: MyText
+  answer3: MyText
+  answer4: MyText
+  correct: 1
+  weight: 1
+
+two:
+  question: MyText
+  answer1: MyText
+  answer2: MyText
+  answer3: MyText
+  answer4: MyText
+  correct: 1
+  weight: 1

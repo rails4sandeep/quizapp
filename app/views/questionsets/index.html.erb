@@ -1,0 +1,35 @@
+<h1>Listing questionsets</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer1</th>
+    <th>Answer2</th>
+    <th>Answer3</th>
+    <th>Answer4</th>
+    <th>Correct</th>
+    <th>Weight</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @questionsets.each do |questionset| %>
+  <tr>
+    <td><%= questionset.question %></td>
+    <td><%= questionset.answer1 %></td>
+    <td><%= questionset.answer2 %></td>
+    <td><%= questionset.answer3 %></td>
+    <td><%= questionset.answer4 %></td>
+    <td><%= questionset.correct %></td>
+    <td><%= questionset.weight %></td>
+    <td><%= link_to 'Show', questionset %></td>
+    <td><%= link_to 'Edit', edit_questionset_path(questionset) %></td>
+    <td><%= link_to 'Destroy', questionset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Questionset', new_questionset_path %>

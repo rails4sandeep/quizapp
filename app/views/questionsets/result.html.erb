@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="large-12 columns">
+      Your Score: <b><%= @score %></b>
+    </div>
+    <div class="large-12 columns">
+      <% flash.each do |name, msg| -%>
+                <%= content_tag :div, msg, class: name %>
+      <% end -%>
+    </div>
+    <div class="large-12 columns">
+      <%= @next_set.question %>
+    </div>
+    <div class="large-12 columns">
+      <%= @next_set.answer1 %>
+    </div>
+    <div class="large-12 columns">
+      <%= @next_set.answer2 %>
+    </div>
+    <div class="large-12 columns">
+      <%= @next_set.answer3 %>
+    </div>
+    <div class="large-12 columns">
+      <%= @next_set.answer4 %>
+    </div>
+    <div class="large-12 columns">
+      <% case @next_set.correct.to_s %>
+        <% when "1" %>
+          The correct answer is: <%= @next_set.answer1 %>
+        <% when "2" %>
+          The correct answer is: <%= @next_set.answer2 %>
+        <% when "3" %>
+          The correct answer is: <%= @next_set.answer3 %>
+        <% when "4" %>
+          The correct answer is: <%= @next_set.answer4 %>
+      <% end %>
+    </div>
+    <div class="large-6 columns">
+      <%= link_to("next",:controller => "questionsets",:action => "next") %>
+    </div>
+    <div class="large-6 columns">
+      <%= link_to("finish",:controller => "questionsets",:action => "finish") %>
+    </div>
+</div>      
+

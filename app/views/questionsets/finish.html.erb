@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="large-12 columns">
+    	<% flash.each do |name, msg| -%>
+              <%= content_tag :div, msg, class: name %>
+    	<% end -%>
+    </div>
+    <div class="large-12 columns">
+		You scored <b><%= @score %></b> out of <b><%= @total %></b> in this quiz    	
+    </div>
+    <div class="large-12 columns">
+		<i class="fa fa-facebook-square fa-2x"></i>
+		<%= link_to('share on facebook', "/auth/facebook", id: "sign_in") %>
+    </div>
+</div>    
